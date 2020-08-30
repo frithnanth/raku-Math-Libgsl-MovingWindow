@@ -1,5 +1,7 @@
 [![Actions Status](https://github.com/frithnanth/raku-Math-Libgsl-MovingWindow/workflows/test/badge.svg)](https://github.com/frithnanth/raku-Math-Libgsl-MovingWindow/actions) [![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-MovingWindow.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-MovingWindow)
 
+![Moving mean, minimum and maximum](examples/01-movingwindow.svg)
+
 NAME
 ====
 
