@@ -32,31 +32,31 @@ my gsl_vector $y = gsl_vector_alloc($size);
 random-vector($x);
 
 gsl_movstat_mean(GSL_MOVSTAT_END_PADZERO, $x, $y, $w2);
-ok ([&&] (gather take gsl_vector_get($y, $_) for ^5
+ok ([&&] ((gather take gsl_vector_get($y, $_) for ^5)
     Z≅
     (0.1121344318879502, 0.03546487267262169, 0.031171619626028192, 0.16187932149374057, 0.08889749127307106)
    )), 'moving mean';
 
 gsl_movstat_variance(GSL_MOVSTAT_END_PADZERO, $x, $y, $w2);
-ok ([&&] (gather take gsl_vector_get($y, $_) for ^5
+ok ([&&] ((gather take gsl_vector_get($y, $_) for ^5)
     Z≅
     (0.39240711007756207, 0.45361502000279574, 0.45409931672436415, 0.5641839748992395, 0.4588320075230943)
    )), 'moving variance';
 
 gsl_movstat_sd(GSL_MOVSTAT_END_PADZERO, $x, $y, $w2);
-ok ([&&] (gather take gsl_vector_get($y, $_) for ^5
+ok ([&&] ((gather take gsl_vector_get($y, $_) for ^5)
     Z≅
     (0.6264240656915745, 0.6735094802620047, 0.6738689165738128, 0.751121810959607, 0.6773713955601419)
    )), 'moving standard deviation';
 
 gsl_movstat_min(GSL_MOVSTAT_END_PADZERO, $x, $y, $w2);
-ok ([&&] (gather take gsl_vector_get($y, $_) for ^5
+ok ([&&] ((gather take gsl_vector_get($y, $_) for ^5)
     Z≅
     (-0.6741802492178977 xx 5)
    )), 'moving min';
 
 gsl_movstat_max(GSL_MOVSTAT_END_PADZERO, $x, $y, $w2);
-ok ([&&] (gather take gsl_vector_get($y, $_) for ^5
+ok ([&&] ((gather take gsl_vector_get($y, $_) for ^5)
     Z≅
     (|(0.999483497813344 xx 4), 0.9149539130739868)
    )), 'moving max';
@@ -71,7 +71,7 @@ ok ([&&] ((gather { take gsl_vector_get($ymin, $_) for ^5; take gsl_vector_get($
    )), 'moving minmax';
 
 gsl_movstat_sum(GSL_MOVSTAT_END_PADZERO, $x, $y, $w2);
-ok ([&&] (gather take gsl_vector_get($y, $_) for ^5
+ok ([&&] ((gather take gsl_vector_get($y, $_) for ^5)
     Z≅
     (0.7849410232156515, 0.24825410870835185, 0.21820133738219738, 1.1331552504561841, 0.6222824389114976)
    )), 'moving sum';
@@ -101,19 +101,19 @@ my gsl_vector $xqqr = gsl_vector_alloc($size);
 my num64 $q = .25e0;
 
 gsl_movstat_qqr(GSL_MOVSTAT_END_PADZERO, $x, $q, $xqqr, $w2);
-ok ([&&] (gather take gsl_vector_get($xqqr, $_) for ^5
+ok ([&&] ((gather take gsl_vector_get($xqqr, $_) for ^5)
     Z≅
     (0.6645832767244428, 0.9329267339780927, 0.9329267339780927, 1.390403690515086, 1.1772320771124214)
    )), 'moving qqr';
 
 gsl_movstat_Sn(GSL_MOVSTAT_END_PADZERO, $x, $y, $w2);
-ok ([&&] (gather take gsl_vector_get($y, $_) for ^5
+ok ([&&] ((gather take gsl_vector_get($y, $_) for ^5)
     Z≅
     (0.6211630129570195, 0.7667832714612038, 0.7667832714612038, 0.9202873433001642, 0.741032531354032)
    )), 'moving Sn';
 
 gsl_movstat_Qn(GSL_MOVSTAT_END_PADZERO, $x, $y, $w2);
-ok ([&&] (gather take gsl_vector_get($y, $_) for ^5
+ok ([&&] ((gather take gsl_vector_get($y, $_) for ^5)
     Z≅
     (0.8285439127794839, 0.8285439127794839, 0.7712714191008243, 0.456262191874358, 0.7733293410107154)
    )), 'moving Qn';
