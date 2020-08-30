@@ -1,6 +1,8 @@
 Revision history for Math-Libgsl-MovingWindow
 
 {{$NEXT}}
+
+0.0.2  2020-08-30T20:04:25+02:00
     - Add examples
       Add colorful graph to README.md
       Fix operator precedence in tests
