@@ -168,6 +168,8 @@ method Qn(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO --> M
 
 =begin pod
 
+![Moving mean, minimum and maximum](examples/01-movingwindow.svg)
+
 =head1 NAME
 
 Math::Libgsl::MovingWindow - An interface to libgsl, the Gnu Scientific Library - Moving Window Statistics
