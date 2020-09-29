@@ -42,53 +42,53 @@ In all the following methods the user must specify how to construct the windows 
 
   * **GSL_MOVSTAT_END_TRUNCATE**: no padding is performed: the windows are truncated as the end points are approached
 
-### mean(Math::Libgsl::Vector $x!, Int $endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
+### mean(Math::Libgsl::Vector $x!, Int :$endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
 
 This method computes the moving window mean of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. The boolean named argument **:$inplace** directs the method to compute the mean in-place. If an error occurs during the computation this method returns a failure object.
 
-### variance(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
+### variance(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
 
 This method computes the moving variance of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. The boolean named argument **:$inplace** directs the method to compute the variance in-place. If an error occurs during the computation this method returns a failure object.
 
-### sd(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
+### sd(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
 
 This method computes the moving standard deviation of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. The boolean named argument **:$inplace** directs the method to compute the standard deviation in-place. If an error occurs during the computation this method returns a failure object.
 
-### min(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
+### min(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
 
 This method computes the moving minimum of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. The boolean named argument **:$inplace** directs the method to compute the minimum in-place. If an error occurs during the computation this method returns a failure object.
 
-### max(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
+### max(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
 
 This method computes the moving maximum of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. The boolean named argument **:$inplace** directs the method to compute the maximum in-place. If an error occurs during the computation this method returns a failure object.
 
-### minmax(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO --> List)
+### minmax(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO --> List)
 
 This method computes the moving minimum and maximum of the input vector **$x**, returning a List of two Math::Libgsl::Vector objects of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. If an error occurs during the computation this method returns a failure object.
 
-### sum(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
+### sum(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
 
 This method computes the moving sum of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. The boolean named argument **:$inplace** directs the method to compute the sum in-place. If an error occurs during the computation this method returns a failure object.
 
-### median(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
+### median(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO, Bool :$inplace? --> Math::Libgsl::Vector)
 
 This method computes the moving median of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. The boolean named argument **:$inplace** directs the method to compute the median in-place. If an error occurs during the computation this method returns a failure object.
 
-### mad0(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO --> List)
+### mad0(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO --> List)
 
-### mad(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO --> List)
+### mad(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO --> List)
 
 This method computes the moving Median Absolute Deviation (MAD) of the input vector **$x**, returning a List of two Math::Libgsl::Vector objects of the same length as the input one: the median and the MAD. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. If an error occurs during the computation this method returns a failure object. The mad0 method does not include the scale factor of 1.4826.
 
-### qqr(Math::Libgsl::Vector $x, Num() $quantile, Int $endtype? = GSL_MOVSTAT_END_PADZERO --> Math::Libgsl::Vector)
+### qqr(Math::Libgsl::Vector $x, Num() $quantile, Int :$endtype? = GSL_MOVSTAT_END_PADZERO --> Math::Libgsl::Vector)
 
 This method computes the moving q-quantile range (QQR) of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$quantile** argument must be between 0 and 0.5. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. If an error occurs during the computation this method returns a failure object.
 
-### Sn(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO --> Math::Libgsl::Vector)
+### Sn(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO --> Math::Libgsl::Vector)
 
 This method computes the moving Sₙ statistics of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. If an error occurs during the computation this method returns a failure object.
 
-### Qn(Math::Libgsl::Vector $x, Int $endtype? = GSL_MOVSTAT_END_PADZERO --> Math::Libgsl::Vector)
+### Qn(Math::Libgsl::Vector $x, Int :$endtype? = GSL_MOVSTAT_END_PADZERO --> Math::Libgsl::Vector)
 
 This method computes the moving Qₙ statistics of the input vector **$x**, returning a Math::Libgsl::Vector of the same length as the input one. The **$endtype** is optional and defaults to GSL_MOVSTAT_END_PADZERO. If an error occurs during the computation this method returns a failure object.
 
