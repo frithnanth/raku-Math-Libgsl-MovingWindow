@@ -1,27 +1,30 @@
 {
-  "auth" : "cpan:FRITH",
-  "authors" : [
+  "auth": "zef:FRITH",
+  "authors": [
     "Fernando Santagata"
   ],
-  "build-depends" : [ ],
-  "depends" : [
+  "build-depends": [
+  ],
+  "depends": [
     "Math::Libgsl::Constants",
     "Math::Libgsl::Matrix"
   ],
-  "description" : "An interface to libgsl, the Gnu Scientific Library - Moving Window Statistics",
-  "license" : "Artistic-2.0",
-  "name" : "Math::Libgsl::MovingWindow",
-  "perl" : "6.d",
-  "provides" : {
-    "Math::Libgsl::MovingWindow" : "lib/Math/Libgsl/MovingWindow.rakumod",
-    "Math::Libgsl::Raw::MovingWindow" : "lib/Math/Libgsl/Raw/MovingWindow.rakumod"
+  "description": "An interface to libgsl, the Gnu Scientific Library - Moving Window Statistics",
+  "license": "Artistic-2.0",
+  "name": "Math::Libgsl::MovingWindow",
+  "perl": "6.d",
+  "provides": {
+    "Math::Libgsl::MovingWindow": "lib/Math/Libgsl/MovingWindow.rakumod",
+    "Math::Libgsl::Raw::MovingWindow": "lib/Math/Libgsl/Raw/MovingWindow.rakumod"
   },
-  "resources" : [ ],
-  "source-url" : "git://github.com/frithnanth/raku-Math-Libgsl-MovingWindow.git",
-  "tags" : [
+  "resources": [
+  ],
+  "source-url": "git://github.com/frithnanth/raku-Math-Libgsl-MovingWindow.git",
+  "tags": [
     "math",
     "nativecall"
   ],
-  "test-depends" : [ ],
-  "version" : "0.0.3"
+  "test-depends": [
+  ],
+  "version": "0.0.3"
 }
