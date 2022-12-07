@@ -1,6 +1,6 @@
 use v6;
 
-unit module Math::Libgsl::Raw::MovingWindow:ver<0.0.3>:auth<zef:FRITH>;
+unit module Math::Libgsl::Raw::MovingWindow:ver<0.0.4>:auth<zef:FRITH>;
 
 use Math::Libgsl::Raw::Matrix :ALL;
 use NativeCall;

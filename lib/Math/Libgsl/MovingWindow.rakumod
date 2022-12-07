@@ -1,4 +1,4 @@
-unit class Math::Libgsl::MovingWindow:ver<0.0.3>:auth<zef:FRITH>;
+unit class Math::Libgsl::MovingWindow:ver<0.0.4>:auth<zef:FRITH>;
 
 use Math::Libgsl::Raw::MovingWindow;
 use Math::Libgsl::Exception;
